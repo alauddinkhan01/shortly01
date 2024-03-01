@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+} */
+
+@layer components {
+    .btn {
+        @apply border px-6 py-2 hover:bg-black hover:text-white text-xl font-kode   transition delay-200 tracking-widest uppercase;
+    }
+}
+.item-gradient {
+    @apply absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-t from-transparent to-gray-900;
+}
+
+
+#navHero{
+    background-image: url('/logo/backgroundnetwork.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#cta{
+    background-image: url('/logo/backgroundnetwork.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+@media (max-width:768px) {
+    #navHero{
+        background-image: url('/logo/headphone1.webp');
+        background-position: center;
+    }
+}
+
+/* hamburger manu */
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: #538bad;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+.hamburger-middle {
+    transform: translateY(7px);
+}
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+.open {
+    transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .hamburger-middle {
+    display: none;
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+.mobile-menu-item {
+    @apply group-hover:border-[#538bad] group-hover:text-[#538bad] group-hover:transition delay-100 group-hover:border-b-2 font-PlusJakarta rounded-sm pb-1;
+}
+
+.menu-option {
+   @apply group-hover:text-[#2f4a5a] group-hover:cursor-pointer group-hover:border-b-[#2f4a5a] group-hover:border-b-2 transition delay-100  pb-1;
+}
